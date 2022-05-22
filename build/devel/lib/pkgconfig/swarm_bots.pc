@@ -1,0 +1,8 @@
+prefix=/home/dhruv/catkin_ws/src/swarm_bots/build/devel
+
+Name: swarm_bots
+Description: Description of swarm_bots
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

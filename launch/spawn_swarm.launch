@@ -1,0 +1,14 @@
+<launch>
+    <param name = "/use_sim_time" value = "true"/>
+
+    <!-- Start World -->
+    <node name  = "gazebo" pkg = "gazebo_ros" type = "gazebo"
+    args = "$(find turtlebot3_gazebo)/worlds/empty_wall.world" respawn = "false" output = "screen" />
+
+    <!-- Start GUI -->
+    <!-- <node name = "gazebo_gui" pkg = "gazebo" type = "gui" respawn = "false" output = "screen" /> -->
+
+    <!-- include the robots -->
+    <include file = "$(find swarm_bots)/launch/spawn_multiple.launch"/>
+
+</launch>

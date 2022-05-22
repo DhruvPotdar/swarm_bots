@@ -1,0 +1,42 @@
+<launch>
+
+    <param name = "robot_description"
+        command = "$(find xacro)/xacro $(find turtlebot3_description)/urdf/turtlebot3_burger.urdf.xacro" />
+
+    <!-- Spawn Robot 1 -->
+    <group ns = "robot_1">
+        <param name = "tf_prefix" value = "robot_1_tf"/>
+        <include file = "$(find swarm_bots)/launch/spawn_one.launch">
+            <arg name = "init_pose" value = "-x 1 -y 1 -z 0" />
+            <arg name = "robot_name" value = "Robot_1" />
+        </include>
+    </group>
+
+    <!-- Spawn Robot 2 -->
+    <group ns="robot_2">
+        <param name = "tf_prefix" value = "robot_2_tf" />
+        <include file = "$(find swarm_bots)/launch/spawn_one.launch" >
+            <arg name = "init_pose" value = "-x -1 -y 1 -z 0" />
+            <arg name = "robot_name"  value = "Robot_2" />
+        </include>
+    </group>
+
+    <!-- Spawn Robot 3 -->
+    <group ns="robot_3">
+        <param name = "tf_prefix" value = "robot_3_tf" />
+        <include file = "$(find swarm_bots)/launch/spawn_one.launch" >
+            <arg name = "init_pose" value = "-x -1 -y -1 -z 0" />
+            <arg name = "robot_name"  value = "Robot_3" />
+        </include>
+    </group>
+
+    <!-- Spawn Robot 4 -->
+    <group ns="robot_4">
+        <param name = "tf_prefix" value = "robot_4_tf" />
+        <include file = "$(find swarm_bots)/launch/spawn_one.launch" >
+            <arg name = "init_pose" value = "-x 1 -y -1 -z 0" />
+            <arg name = "robot_name"  value = "Robot_4" />
+        </include>
+    </group>
+
+</launch>
