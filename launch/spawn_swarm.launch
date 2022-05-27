@@ -1,4 +1,5 @@
 <launch>
+
     <param name = "/use_sim_time" value = "true"/>
 
     <!-- Start World -->
@@ -10,5 +11,7 @@
 
     <!-- include the robots -->
     <include file = "$(find swarm_bots)/launch/spawn_multiple.launch"/>
+
+    <!-- <node pkg = "swarm_bots" type = "robot_1.py" name = "robot_1" />  -->
 
 </launch>

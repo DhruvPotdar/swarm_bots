@@ -39,4 +39,51 @@
         </include>
     </group>
 
+    <!-- Spawn Robot 5 -->
+    <group ns="robot_5">
+        <param name = "tf_prefix" value = "robot_5_tf" />
+        <include file = "$(find swarm_bots)/launch/spawn_one.launch" >
+            <arg name = "init_pose" value = "-x 2 -y 2 -z 0" />
+            <arg name = "robot_name"  value = "Robot_5" />
+        </include>
+    </group>
+
+    <!-- Spawn Robot 6 -->
+    <group ns="robot_6">
+        <param name = "tf_prefix" value = "robot_6_tf" />
+        <include file = "$(find swarm_bots)/launch/spawn_one.launch" >
+            <arg name = "init_pose" value = "-x 2 -y -2 -z 0" />
+            <arg name = "robot_name"  value = "Robot_6" />
+        </include>
+    </group>
+
+    <!-- Spawn Robot 7 -->
+    <group ns="robot_7">
+        <param name = "tf_prefix" value = "robot_7_tf" />
+        <include file = "$(find swarm_bots)/launch/spawn_one.launch" >
+            <arg name = "init_pose" value = "-x -2 -y 2 -z 0" />
+            <arg name = "robot_name"  value = "Robot_7" />
+        </include>
+    </group>
+
+    <!-- Spawn Robot 8 -->
+    <group ns="robot_8">
+        <param name = "tf_prefix" value = "robot_8_tf" />
+        <include file = "$(find swarm_bots)/launch/spawn_one.launch" >
+            <arg name = "init_pose" value = "-x -2 -y -2 -z 0" />
+            <arg name = "robot_name"  value = "Robot_8" />
+        </include>
+    </group>
+
+    <!-- Spawn Robot 9 -->
+    <group ns="robot_9">
+        <param name = "tf_prefix" value = "robot_9_tf" />
+        <include file = "$(find swarm_bots)/launch/spawn_one.launch" >
+            <arg name = "init_pose" value = "-x 3 -y 3 -z 0" />
+            <arg name = "robot_name"  value = "Robot_9" />
+        </include>
+    </group>
+
+    
+
 </launch>
