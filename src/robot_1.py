@@ -20,7 +20,7 @@ def move():
     vel_msg = Twist()
     vel_msg.linear.x = 0.1
 
-    rospy.Subscriber("robot_1/odom", Odometry, callback)
+    # rospy.Subscriber("robot_1/odom", Odometry, callback)
 
     while not rospy.is_shutdown():
         pub.publish(vel_msg)
